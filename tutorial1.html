@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salut coaie</title>
+</head>
+<body>
+  <h1 id="intro">Hello people</h1>
+  <p>Who there?</p>
+  <input type="text" id="name"><button id="buttonName">Set</button>
+</body>
+<script>
+    function app() {
+        function printMyName(e) {
+            var myName = document.getElementById("name").value;
+            document.getElementById("intro").innerHTML = "Hello " + myName;
+        }
+        document.getElementById("buttonName").onclick = printMyName;
+    }
+
+    window.onload=app;
+
+    export const capitalizeString = str => str.toUpperCase()
+</script>
+</html>

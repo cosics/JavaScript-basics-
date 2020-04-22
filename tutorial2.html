@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body></body>
+<script>
+    var x = 0;
+    function change(num) {
+        return num+5;
+    }
+    console.log(change(2));
+
+    function bambucea(numer) {
+        let sir = "";
+        sir += "Numerul este " + numer;
+        console.log(sir)
+    }
+    bambucea(7);
+
+    function nextInLine(arr, item) {
+        arr.push(item);
+        var x = arr.shift();
+        return JSON.stringify(arr);
+    }
+    let testArr = [1,2,3,4,5];
+    console.log(nextInLine(testArr, 6));
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    const realNumbersArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+    const squareList = (arr) => {
+        const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+        return squaredIntegers;
+    }
+
+    console.log(squareList(realNumbersArray));
+
+    var officers = [
+        { id: 20, name: 'Ana'},
+        { id: 24, name: 'Radu'},
+        { id: 22, name: 'Janos'}
+    ];
+    //
+    var officerIds = [];
+
+    officers.forEach(function (officer) {
+        officerIds.push(officers.id);
+    });
+    //sau
+    var officerId = officers.map(function(officer) {
+        return officer.id;
+    });
+    //sau
+    //const officerId = officers.map(officer => officer.id);
+    //
+    var totalYears = pilots.reduce(function (accumulator, pilot) {
+        return accumulator + pilot.years;
+    }, 0);
+    //
+  //  const totalYears = pilots.reduce((acc, pilot) => acc+pilot.years, 0);
+</script>
+</html>

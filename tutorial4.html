@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+ /* //def parameters
+    const increment = (function() {
+        return function increment(number, value = 1) {
+            return number + value;
+        };
+    })();
+    console.log(increment(5,2));
+    console.log(5);
+
+    //reduce rest operator
+
+    const sum = (function() {
+        return function sum(...args) {
+            return args.reduce((a,b) => a + b, 0);
+        };
+    })();
+
+    console.log(sum(1,2,3,4,5));
+
+    //copiaza continut array
+    const arr1 = ['jan','feb','mar','apr','may'];
+    let arr2;
+ (function () {
+     arr2 = [...arr1];
+     arr1[0] = 'cucu';
+ })();
+ console.log(arr2);
+
+ //freeze obj
+
+    function freezeObj() {
+        "use strict";
+        const MATH_CONSTANTS = {
+            PI: 3.14
+        };
+
+        Object.freeze(MATH_CONSTANTS);
+
+        try {
+            MATH_CONSTANTS.PI = 99;
+        }  catch( ex ) {
+            console.log(ex);
+        }
+        return MATH_CONSTANTS.PI;
+    };
+
+    const PI = freezeObj();
+
+ //schimba valoare prop obj
+
+ const AVG_TEMP = {
+     today: 15,
+     tomorrow: 21
+ };
+
+ function getTempOfTom(avg_temp) {
+     const { tomorrow: tempOfTom } = avg_temp;
+     return tempOfTom;
+ }
+
+ console.log(getTempOfTom(AVG_TEMP));
+//
+
+
+ const LOCAL_FORECAST = {
+     today: { min: 72, max: 83},
+     tomorrow: { min: 73.3, max: 84.6}
+ };
+
+ function getTomMax(forecast) {
+     const {tomorrow: { max: tomTemp }} = forecast};
+     return tomTemp;
+ }
+
+ console.log(getTomMax(LOCAL_FORECAST));
+
+    //destructuring arrays
+
+    const [z, x, , y] = [1, 2, 3, 4, 5, 6];
+    console.log(z, x, y);
+
+    let a = 8, b = 6;
+ (() => {
+     "use strict";
+     [a, b] = [b, a];
+ })();
+ console.log(a);
+ console.log(b);
+
+ //
+
+
+    const source = [1,2,3,4,5,6,7];
+
+    function stergeDoo(list) {
+        const [ , , ...arr] = list;
+        return arr;
+    }
+
+    console.log(stergeDoo(source));
+    console.log(source);
+
+    //use destructuring in functions args
+
+    const stats = {
+        max: 56.7,
+        min:0.75,
+        median: 65
+    };
+
+    const half = (function() {
+        return function half({max, min}) {
+            return( max + min ) / 2.0;
+        };
+    })();
+    console.log(stats);
+    console.log(half(stats));
+//
+    const person  = {
+        name: "Cezara Luca",
+        age: 20
+    };
+
+    const greeting = 'Hello, my name is ${person.name}!' +
+        'I am ${person.age} years old.';
+    console.log(greeting);
+
+    const result = {
+        failure: ["kana", "jambe"]
+    };
+    function makeList(arr) {
+        var rezultatArray = [];
+        for (let i = 0; i < arr.length; i++) {
+            rezultatArray.push('cf coaie ${arr[i]}');
+        }
+        return rezultatArray;
+    };
+    console.log(makeList(result.failure));
+
+    /
+
+    const createPerson = (name, age, gender) => ({name, age, gender});
+    console.log(createPerson("valentin", 23, "barbat"));
+
+    //setter
+
+    const bici = {
+        gear: 2,
+        setGear (newGear) {
+            "use strict";
+            this.gear = newGear;
+        }
+    };
+
+    bici.setGear(3);
+    console.log(bici.gear);
+
+  //obiect clasic
+
+    var Nava = function ( planetaMama ) {
+        this.planetaMama = planetaMama;
+    }
+    var zora = new Nava("Mercur");
+    var laika = new Nava("Pamant");
+
+    console.log(zora.planetaMama);
+
+    //obiect cu clasa
+
+    class Nava {
+        constructor(planetaMama) {
+            this.planetaMama = planetaMama;
+        }
+    }
+    var zora = new Nava("Mercur");
+    console.log(zora.planetaMama);
+
+
+
+    function makeClass() {
+        class Leguma {
+            cnstructor(nume) {
+                this.nume = nume;
+            }
+        }
+        return Leguma;
+    }
+    const Leguma = makeClass();
+    const morcov = new Leguma(" morcov");
+    console.log(morcov.nume);
+
+    //import
+
+    import { capitalizeString } from "./tutorial1.html"
+    const cap = capitalizeString("hello!");
+    console.log(cap);
+
+  */
+    //ceva functii
+
+    const capitalizeString = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    console.log(capitalizeString("coaie"));
+</script>
+</html>

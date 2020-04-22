@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function egal(numer) {
+        if (numer == 12) {
+            return "ok bine";
+        }
+        return "nu bine";
+    }
+    console.log(egal(10));
+
+    function zile(ziua) {
+        var rezultat = "";
+        switch (ziua) {
+            case 1:
+                rezultat = "luni";
+                break;
+            case 2:
+                rezultat = "marti";
+                break;
+            default:
+                rezultat = "nu luni sau marti";
+                break;
+        }
+        return rezultat;
+    }
+
+    console.log(zile(1));
+    console.log(zile(4));
+
+    function mm(a,b) {
+        return a < b;
+    }
+    console.log(mm(10,15));
+
+    var myArray = [];
+
+    var i = 0;
+    while (i <5) {
+        myArray.push(i);
+    }
+    console.log(myArray);
+
+    function semn(num) {
+        return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+    }
+    console.log(semn(3));
+
+    const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+    console.log(myConcat([1,2],[3,4,5]));
+
+    const realNumbersArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+    const squareList = (arr) => {
+        const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+        return squaredIntegers;
+    }
+
+    console.log(squareList(realNumbersArray));
+
+
+
+</script>
+</html>
